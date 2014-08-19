@@ -14,3 +14,7 @@
 *.jar
 *.war
 *.ear
+
+#eclipse
+.settings
+
