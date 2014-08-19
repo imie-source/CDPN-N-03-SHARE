@@ -1,5 +1,3 @@
-.classpath
-.project
 *.class
 
 #merge conflict
@@ -17,4 +15,7 @@
 
 #eclipse
 .settings
+.classpath
+.project
+build
 
