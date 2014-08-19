@@ -1,0 +1,35 @@
+@CHARSET "UTF-8";
+
+.autoMargin{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.standardData{
+	border-radius : 10px;
+	border-style: solid;
+	
+}
+
+.displayTable{
+	display: table;
+}
+
+.displayRow{
+	display: table-row;
+}
+.displayRow:first-child .displayCell{
+	padding-top: 10px;
+}
+.displayRow:last-child .displayCell{
+	padding-right: 10px;
+}
+
+.displayRow:nth-child(odd){
+	background-color: LightGrey;
+}
+
+.displayCell{
+	padding: 5px;
+	display: table-cell;
+}
