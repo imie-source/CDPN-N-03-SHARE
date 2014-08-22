@@ -1,0 +1,26 @@
+<%@page import="org.imie.model.Personnage"%>
+<div>
+	<%
+		Boolean connexion = (Boolean) request.getAttribute("notConnected");
+		connexion = connexion == null ? false : connexion;
+		Integer idConnecte = null;
+		Personnage personnageConnecte=null;
+		if (!connexion) {
+			personnageConnecte = (Personnage) session
+					.getAttribute("personnageConnecte");
+			idConnecte = personnageConnecte.getId();
+		}
+	%>
+	<div style="text-align: right;">
+	<div style="display: inline-block;">
+		<%=personnageConnecte!=null?personnageConnecte.getNom():""%>
+	</div>
+	<%if(!connexion){ %>
+	<div style="display: inline-block;">
+		<form action="Connexion" method="post">
+		<input type="submit" name="commande" value="deconnecter"/>
+		</form>
+	</div>
+	<%} %>
+	</div>
+</div>
