@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Title of the document</title>
+<meta charset="UTF-8">
+</head>
+<script src="tp_syntaxe_algo_array.js"></script>
+<body>
+
+</body>
+<script>
+var fctAff = function(tab){ 
+ document.writeln(tab);
+ document.writeln('<br>');
+}
+
+var fctAff2 = function(tab){ 
+ document.write('<tr>');
+ for(key in tab){
+  document.write('<td>'+tab[key]+'</td>');
+ } 
+ document.writeln('</tr>');
+}
+
+
+document.write('<table>');
+tp7([19,34,3,8,5,100,24,30,9]);
+document.write('</table>');
+
+test();
+</script>
+</html>
