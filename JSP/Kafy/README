@@ -1,0 +1,19 @@
+Scenario principal :	
+
+	premier ecran : choix d'un personnage.
+
+	- cliquer sur choisir
+
+	affichage de l'écran de la liste des personnages
+
+	- cliquer sur jouer ( dans le header )
+
+	affichage du plateau
+
+	z , q , s et d sont les touches de déplacements du personnage
+
+	
+
+	
+
+	
