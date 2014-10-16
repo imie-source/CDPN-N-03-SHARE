@@ -1,2 +1,2 @@
 var model = new Model();
-console.log(model.init());
+// console.log(model.init());

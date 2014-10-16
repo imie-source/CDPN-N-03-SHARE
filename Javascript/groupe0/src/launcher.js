@@ -33,7 +33,7 @@ function launcher() {
 
     $(document).ready(function() {
 
-        // creation de l'observable
+        // // creation de l'observable
         observable = new Observable();
 
         // creation de l'observer cat
@@ -42,7 +42,13 @@ function launcher() {
             .init()
         ;
 
-        console.log(modelElement);
+        // model = new Model();
+        // model.init();
+        // setInterval(function () {
+        //     console.log(model);
+        //     console.log(model.water(model.field1));
+        // }, 3000);
+
     });
 
 }
