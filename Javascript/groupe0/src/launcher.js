@@ -4,8 +4,11 @@ function launcher () {
    * Object instanciation for application initialisation
    *
    */
-  model       = new Model();
-  view        = new View();
-  controller  = new Controller();
+  var model       = new Model();
+  var view        = new View(model);
+  var controller  = new Controller(model, view);
+
+  view.attach(controller);
+  model.attach(view);
 
 }
