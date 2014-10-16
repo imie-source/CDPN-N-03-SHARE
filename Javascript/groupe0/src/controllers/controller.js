@@ -16,13 +16,10 @@ function Controller(model, vue) {
 
         var base = this;
         base.init = function () {
-            controller.test();
         };
 
         base.notify = function (event, parameters) {
-            console.log("vue notifié");
-            console.log(event);
-            console.log(parameters);
+
         };
 
         return base;
@@ -38,9 +35,28 @@ function Controller(model, vue) {
         };
 
         base.notify = function (event, parameters) {
-            console.log("controller notifié");
-            console.log(event);
-            console.log(parameters);
+            switch(event) {
+                case "waterField1":
+                    console.log("Ajout d'eau dans le champs 1");
+                    break;
+                case "waterField2":
+                    console.log("Ajout d'eau dans le champs 2");
+                    break;
+                case "waterField3":
+                    console.log("Ajout d'eau dans le champs 3");
+                    break;
+                case "info1":
+                    console.log("Information champs 1");
+                    break;
+                case "info2":
+                    console.log("Information champs 2");
+                    break;
+                case "info3":
+                    console.log("Information champs 3");
+                    break;
+                default:
+                    break;
+            }
         };
 
         return base;
@@ -63,13 +79,6 @@ function Controller(model, vue) {
         ;
 
     });
-
-    controller.test = function () {
-        $('#btnArroser1').bind('click', function () {
-            observableModel.notifyObservers('water');
-        });
-    }
-
 
     return controller;
 }
