@@ -24,7 +24,7 @@ function Model() {
 
     // failing
     setInterval(function () {
-      land.waterlessDays += 1
+      land.waterlessDays += 1;
     }, 2000);
   }
 
