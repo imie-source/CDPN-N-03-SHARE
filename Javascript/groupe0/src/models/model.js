@@ -5,45 +5,45 @@ function Model() {
         money = 40;
 
     model.init = function () {
-        model.land1 = new Land();
-        model.land2 = new Land();
-        model.land3 = new Land();
+        model.field1 = new Field();
+        model.field2 = new Field();
+        model.field3 = new Field();
 
         return model;
     };
 
-    model.water = function (land) {
+    model.water = function (field) {
 
     };
 
-    model.sell = function (land) {
+    model.sell = function (field) {
 
     };
 
-    model.harvest = function (land) {
+    model.harvest = function (field) {
 
     };
 
-    function Land() {
-        var land = this;
-        land.stock = 4;
-        land.sellingPrice = 12;
-        land.waterDays = 0;
-        land.waterlessDays = 0;
+    function Field() {
+        var field = this;
+        field.stock = 4;
+        field.sellingPrice = 12;
+        field.waterDays = 0;
+        field.waterlessDays = 0;
         // status :
         //  empty : failed
         //  grow  : water
         //  ready : to harvest
-        land.state = 'grow';
+        field.state = 'grow';
 
         // Rupture
         setInterval(function () {
-            land.waterDays += 1;
+            field.waterDays += 1;
         }, 2000);
 
         // failing
         setInterval(function () {
-            land.waterlessDays += 1;
+            field.waterlessDays += 1;
         }, 2000);
     }
 
