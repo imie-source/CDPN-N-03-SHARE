@@ -44,6 +44,7 @@ function Model() {
 
         // failing
         setInterval(function () {
+
             field.waterlessDays += 1;
 
             if(field.waterlessDays === 10){
