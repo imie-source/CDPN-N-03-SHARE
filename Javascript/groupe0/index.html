@@ -5,135 +5,141 @@
     <title>Jeux des champs</title>
     <link rel="stylesheet" type="text/css" href="css/semantic.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <script src="javascript/jquery-2.1.1.min.js"></script>
-    <script src="javascript/semantic.min.js"></script>
 </head>
 <body>
-<div class="ui center aligned segment">
+<div id="model">
+    <div class="ui center aligned segment">
 
-    <div class="ui green icon header">
-        <i class="circular money icon"></i>Farm Simulator
-        <div class="sub header">Jeux des champs</div>
+        <div class="ui green icon header">
+            <i class="circular money icon"></i>Farm Simulator
+            <div class="sub header">Jeux des champs</div>
+        </div>
+
     </div>
-
-</div>
-<div class="ui center aligned segment">
-    <div class="ui label" id="labelBudget">
+    <div class="ui center aligned segment">
+        <div class="ui label" id="labelBudget">
             $
-    </div>    
-</div>    
-<div class="ui center aligned segment">
-    <div class="ui center aligned three column grid">
-        <div class="equal height row">
+        </div>
+    </div>
+    <div class="ui center aligned segment">
+        <div class="ui center aligned three column grid">
+            <div class="equal height row">
 
-            <div class="column">
-                <div class="row">
-                    <div class="ui button" id="btnArroser1">
-                        <i class="lab blue icon"></i>
-                        Water
+                <div class="column">
+                    <div class="row">
+                        <div class="ui button" id="btnArroser1">
+                            <i class="lab blue icon"></i>
+                            Water
+                        </div>
                     </div>
-                </div>   
 
-                <div class="row">
-                    <div class="ui label" id="labelChamps1">
-                        23
+                    <div class="row">
+                        <div class="ui label" id="labelChamps1">
+                            23
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="ui button" id="btnInfo1">
+                            <i class="info letter icon"></i>
+                            Champs N°1
+                        </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="ui button" id = "btnInfo1">
-                        <i class="info letter icon"></i>
-                        Champs N°1
+                <div class="column">
+                    <div class="row">
+                        <div class="ui button" id="btnArroser2">
+                            <i class="lab blue icon"></i>
+                            Water
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="ui label" id="labelChamps2">
+                            23
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="ui button" id="btnInfo2">
+                            <i class="info letter icon"></i>
+                            Champs N°2
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="column">
-                <div class="row">
-                    <div class="ui button" id="btnArroser2">
-                        <i class="lab blue icon"></i>
-                        Water
+
+                <div class="column">
+                    <div class="row">
+                        <div class="ui button" id="btnArroser3">
+                            <i class="lab blue icon"></i>
+                            Water
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="ui label" id="labelChamps3">
+                            23
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="ui button" id="btnInfo3">
+                            <i class="info letter icon"></i>
+                            Champs N°3
+                        </div>
                     </div>
                 </div>
-
-                <div class="row">
-                    <div class="ui label" id="labelChamps2">
-                        23
-                    </div>
-                </div>                
-
-                <div class="row">
-                    <div class="ui button" id = "btnInfo2">
-                        <i class="info letter icon"></i>
-                        Champs N°2
-                    </div>            
-                </div>                           
-            </div>
-
-            <div class="column">
-                <div class="row">                
-                    <div class="ui button" id="btnArroser3">
-                        <i class="lab blue icon"></i>
-                        Water
-                    </div>
-                </div>                           
-                <div class="row">
-                    <div class="ui label" id="labelChamps3">
-                        23
-                    </div>
-                </div>                           
-                <div class="row">
-                    <div class="ui button" id = "btnInfo3">
-                        <i class="info letter icon"></i>
-                        Champs N°3
-                    </div>            
-                </div>                                               
             </div>
         </div>
     </div>
-</div>
-<div class="ui segment" id="information">
-    <h2>Informations champs N°</h2>
-    <div class="ui right red corner label">
-        <i class="close icon"></i>
-    </div>
-    <div class="ui two column grid">
-        <div class="equal height row">
-            <div class="column">
-                <div class="ui divided selection list">
-                    <a class="item">
-                        <div class="ui button">
-                            <i class="lab blue icon"></i>
-                        </div>
-                        0000000000000000 $
-                    </a>
-                    <a class="item">
-                        <div class="ui button">
-                            <i class="money green icon"></i>
-                        </div>
-                        0000000000000000 L
-                    </a>
+    <div class="ui segment" id="information">
+        <h2>Informations champs N°</h2>
+
+        <div class="ui right red corner label">
+            <i class="close icon"></i>
+        </div>
+        <div class="ui two column grid">
+            <div class="equal height row">
+                <div class="column">
+                    <div class="ui divided selection list">
+                        <a class="item">
+                            <div class="ui button">
+                                <i class="lab blue icon"></i>
+                            </div>
+                            0000000000000000 $
+                        </a>
+                        <a class="item">
+                            <div class="ui button">
+                                <i class="money green icon"></i>
+                            </div>
+                            0000000000000000 L
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <div class="column">
-                <div class="ui divided selection list">
-                    <a class="item">
-                        <div class="ui horizontal label">20</div>
-                        Nombre de récoltes
-                    </a>
-                    <a class="item">
-                        <div class="ui horizontal label">10</div>
-                        Nombre de jours avec eau
-                    </a>
+                <div class="column">
+                    <div class="ui divided selection list">
+                        <a class="item">
+                            <div class="ui horizontal label">20</div>
+                            Nombre de récoltes
+                        </a>
+                        <a class="item">
+                            <div class="ui horizontal label">10</div>
+                            Nombre de jours avec eau
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
 <!--Load app script-->
+<script src="javascript/jquery-2.1.1.min.js"></script>
+<script src="javascript/semantic.min.js"></script>
 <script src="src/vendor/observer/observer.js"></script>
 <script src="src/vendor/observer/observable.js"></script>
 <script src="src/models/model.js"></script>
 <script src="src/controllers/controller.js"></script>
 <script src="src/views/view.js"></script>
 <script src="src/launcher.js"></script>
+<script>
+    launcher();
+</script>
 </body>
 </html>

@@ -3,7 +3,7 @@
  * Observable's declaration
  */
 var Observable = function() {
-  this.observers = new Array();
+  this.observers = [];
 };
 
 /**
