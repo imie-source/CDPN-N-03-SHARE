@@ -1,13 +1,13 @@
 /**
  * OBSERVABLE CLASS
- * Observable declaration
+ * Observable's declaration
  */
 var Observable = function() {
   this.observers = new Array();
 };
 
 /**
- * Observable functions
+ * Observable's functions
  */
 Observable.prototype = {
 
