@@ -1,7 +1,7 @@
 function launcher () {
 
   /*
-   * Object instanciation for application initialisation
+   * Object instantiation for application initialisation
    *
    */
   model       = new Model();
