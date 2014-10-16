@@ -170,7 +170,44 @@ function tp8(){
  );
 }
 
+function Human(){this.speak = function(){ return "bonjour" } }
+function Monster() {
+ this.speak = function(){ return "grrrr" };
+ this.manger= function(){ return "miam" }
+}
 
+
+
+function Hulk(){}
+
+// hulk hérite de Human
+console.log(Human.prototype);
+Hulk.prototype = Object.create(Human.prototype)
+Hulk.prototype.constructor=Hulk;
+hulk1 = new Hulk()
+console.log(hulk1.speak());		// "bonjour"
+
+// hulk hérite Monster
+Hulk.prototype =new Monster()//Object.create(Monster.prototype)
+Hulk.prototype.constructor=Hulk;
+hulk2 = new Hulk()
+console.log(hulk2.speak());		// "grrrr"
+
+
+console.log(hulk1);
+console.log(hulk2);
+console.log(hulk1.constructor);
+console.log(hulk2.constructor);
+
+
+// Attention:
+console.log(hulk1.speak());		// "bonjour"
+//Le changement de constructeur n’impacte pas les objets déjà créés 
+//car la propriété prototype de hulk1 n’a pas été modifiée, 
+//c’est le prototype du parent (Hulk) qui a été modifié.
+
+hulk1.prototype = new Monster();
+hulk1.speak()			// "bonjour"
 
 
 
