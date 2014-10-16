@@ -8,20 +8,26 @@ function Model() {
         model.field1 = new Field();
         model.field2 = new Field();
         model.field3 = new Field();
-
-        return model;
     };
 
     model.water = function (field) {
+        model.money -= 1;
 
-    };
-
-    model.sell = function (field) {
-
+        if(field.state === 'grow') {
+            field.waterDays += 1;
+        } else if (field.waterDays === 10) {
+            field.waterDays = 0;
+            field.state = 'ready';
+        }
     };
 
     model.harvest = function (field) {
-
+        if(field.state === 'ready') {
+            model.money += 12;
+            field.state = 'grow';
+        } else {
+            throw "message d'erreur pour pas pret";
+        }
     };
 
     function Field() {
@@ -36,14 +42,15 @@ function Model() {
         //  ready : to harvest
         field.state = 'grow';
 
-        // Rupture
-        setInterval(function () {
-            field.waterDays += 1;
-        }, 2000);
-
         // failing
         setInterval(function () {
             field.waterlessDays += 1;
+
+            if(field.waterlessDays === 10){
+                field.state         = 'empty';
+                field.waterDays     = 0;
+                field.waterlessDays = 0;
+            }
         }, 2000);
     }
 
