@@ -11,8 +11,7 @@
 * test
 
 ## Philippe
-* test
-* test
+* Observer/Observable
 
 ## Thibault
 
