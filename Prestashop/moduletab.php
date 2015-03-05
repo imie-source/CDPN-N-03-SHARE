@@ -22,6 +22,7 @@ class MonModule extends Module {
 		$tab = new Tab();
 		
 		$tab->class_name = 'AdminMonModule';
+		$tab->name[1] = $this->l('MyModule');
 		$tab->id_parent = (int)Tab::getIdFromClassName('AdminCartRules'); 
 		$tab->module = $this->name;
 		$tab->add();
