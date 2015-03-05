@@ -1,19 +1,19 @@
-
+<?php
 class AdminPosStaticBlocksController extends ModuleAdminController {
-public function __construct() {
-        $this->table = 'pos_staticblock';
-        $this->className = 'Staticblock';
-        $this->identifier = 'id_posstaticblock';
-        $this->bootstrap = true;
-        $this->lang = true;
-        $this->deleted = false;
-        $this->colorOnBackground = false;
-        $this->bulk_actions = array('delete' => array('text' => $this->l('Delete selected'), 'confirm' => $this->l('Delete selected items?')));
-        Shop::addTableAssociation($this->table, array('type' => 'shop'));
-        $this->context = Context::getContext();
-
-        parent::__construct();
-    }
+	public function __construct() {
+		$this->table = 'pos_staticblock';
+	        $this->className = 'Staticblock';
+	        $this->identifier = 'id_posstaticblock';
+	        $this->bootstrap = true;
+	        $this->lang = true;
+	        $this->deleted = false;
+	        $this->colorOnBackground = false;
+	        $this->bulk_actions = array('delete' => array('text' => $this->l('Delete selected'), 'confirm' => $this->l('Delete selected items?')));
+	        Shop::addTableAssociation($this->table, array('type' => 'shop'));
+	        $this->context = Context::getContext();
+	
+	        parent::__construct();
+	    }
 
     
 
