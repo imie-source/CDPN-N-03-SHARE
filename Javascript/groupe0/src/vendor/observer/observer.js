@@ -3,7 +3,7 @@
  * Observer's declaration
  */
 var Observer = function() {
-  this.observers = new Array();
+  //this.observers = [];
 };
 
 /**
