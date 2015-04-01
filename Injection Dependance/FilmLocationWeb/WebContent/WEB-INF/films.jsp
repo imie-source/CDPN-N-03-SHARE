@@ -10,15 +10,29 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<c:if test="${urlToLanguage.language=='fr'}">
+		<c:set var="films" value="${listFilmGUI.filmFR}"></c:set>
+	</c:if>
+	<c:if test="${urlToLanguage.language=='us'}">
+		<c:set var="films" value="${listFilmGUI.filmUS}"></c:set>
+	</c:if>
+	<a href="./fr">francais</a>
+	<a href="./us">américains</a>
 	<table>
 		<tr>
 			<th>Titre</th>
+			<th>Genre</th>
 		</tr>
 		<c:forEach items="${films}" var="film">
 			<tr>
 				<td><c:out value="${film.titre}"></c:out></td>
+				<td><c:out value="${film.genre}"></c:out></td>
 			</tr>
 		</c:forEach>
 	</table>
+	<form method="post">
+		<input name="titre" /> <input type="submit" value="ajouter">
+	</form>
+
 </body>
 </html>
