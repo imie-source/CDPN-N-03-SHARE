@@ -36,9 +36,16 @@ public class ServicePersonne implements Serializable {
 		Personne personne1 = new Personne();
 		personne1.setId(1);
 		personne1.setNom("jean");
-
 		personne1.setDateNaissance("15/12/2000");
-
+		Livre livre1 = new Livre();
+		livre1.setId(1);
+		livre1.setNom("livre1");
+		personne1.addLivre(livre1);
+		Livre livre2 = new Livre();
+		livre2.setId(2);
+		livre1.setNom("livre2");
+		personne1.addLivre(livre2);
+		
 		personnes.add(personne1);
 
 		Personne personne2 = new Personne();
@@ -67,6 +74,19 @@ public class ServicePersonne implements Serializable {
 	public Personne create(Personne personne) {
 		personnes.add(personne);
 		return personne;
+	}
+
+	public Personne update(Personne personne) {
+		Personne personneToUpdate=  getById(personne.getId());
+		personneToUpdate.setNom(personne.getNom());
+		personneToUpdate.setDateNaissance(personne.getDateNaissance());
+		return personneToUpdate;
+	}
+
+	public void delete(Integer id) {
+		Personne personneToDelete=  getById(id);
+		personnes.remove(personneToDelete);
+		
 	}
 
 }
