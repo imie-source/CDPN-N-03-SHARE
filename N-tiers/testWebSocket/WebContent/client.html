@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<input id="inputMessage" type="text" />
+	<button id="buttonMessage">envoyer message</button>
+	<div id="receivedMessages">
+	</div>
+</body>
+<script type="text/javascript">
+var ws = new WebSocket("ws://localhost:8080/testWebSocket/endPoint");
+ws.onopen = function(){console.log("open")};
+ws.onclose = function(){console.log("close")};
+document.getElementById('buttonMessage').addEventListener('click', function(e){
+	var message = document.getElementById('inputMessage').value;
+	console.log(message);
+	ws.send(message);
+});
+ws.onmessage = function (evt) 
+{ 			     	
+	var msg = evt.data;
+	var messages = document.getElementById('receivedMessages')
+	var newMessage= document.createElement('div');
+	newMessage.appendChild(document.createTextNode(msg));
+	messages.appendChild(newMessage);
+};
+
+
+
+
+</script>
+</html>
