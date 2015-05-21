@@ -1,0 +1,53 @@
+version = '1.0.0-SNAPSHOT'
+group = 'imie'
+apply plugin:'java'
+apply plugin:'war'
+apply plugin:'cargo'
+sourceCompatibility = 1.8
+
+test{
+    outputs.upToDateWhen { false }
+}
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'org.gradle.api.plugins:gradle-cargo-plugin:1.5.1'
+    }
+}
+
+repositories {
+	mavenCentral()
+}
+
+war {
+	from 'WebContent' 
+}
+
+dependencies {
+	compile(project(':TennisRulesService'))
+	providedCompile 'javax:javaee-api:7.0'
+	testCompile 'junit:junit:4.+'
+	testCompile 'org.seleniumhq.selenium:selenium-firefox-driver:2.+'
+	testRuntime 'org.seleniumhq.selenium:selenium-support:2.+'
+	def cargoVersion = '1.4.+'
+	cargo "org.codehaus.cargo:cargo-core-uberjar:$cargoVersion",
+        	"org.codehaus.cargo:cargo-ant:$cargoVersion",
+		"org.wildfly:wildfly-controller-client:8.2.0.Final"
+}
+
+cargo {
+ containerId = 'wildfly8x'
+ remote {
+  hostname = 'localhost'
+  port = 9990
+  username = 'imie'
+  password = 'imie'
+ }
+}
+
+test.dependsOn cargoRedeployRemote
+
+
